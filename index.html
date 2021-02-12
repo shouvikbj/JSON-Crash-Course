@@ -3,43 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Neomorphism</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        background: #1b98f5;
-      }
-      .container {
-        margin: 120px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-      }
-      .neo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        border-radius: 50px;
-        height: 300px;
-        width: 300px;
-        background-color: #1b98f5;
-        box-shadow: -6px -6px 10px #ffffff90, 6px 6px 15px #00000090;
-      }
-      img {
-        border-radius: 50px;
-      }
-    </style>
+    <title>JSON Crash Course</title>
   </head>
   <body>
-    <div class="container">
-      <div class="neo">
-        <img src="./test.jpeg" alt="logo" />
-      </div>
-    </div>
+    <div id="root"></div>
+    <script>
+      var person = {
+        name: "Shouvik",
+        age: 24,
+        address: {
+          city: "Panskura",
+          state: "West Bengal",
+        },
+        email: function () {
+          return "gangpayee@gmail.com";
+        },
+      };
+
+      // person = JSON.stringify(person);
+      // document.getElementById("root").innerHTML = person;
+
+      console.log(person.email());
+    </script>
   </body>
 </html>
