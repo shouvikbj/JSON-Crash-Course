@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON Crash Course</title>
+  </head>
+  <body>
+    <div>
+      <ul id="people"></ul>
+    </div>
+    <script>
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        // console.log(xhttp.responseText);
+        var response = JSON.parse(xhttp.responseText);
+        var people = response.people;
+        var output = "";
+        for (var i = 0; i < people.length; i++) {
+          output += `<li>${people[i].name}</li>`;
+          output += `<li>${people[i].age}</li>`;
+        }
+        document.getElementById("people").innerHTML = output;
+      };
+      xhttp.open("GET", "people.json", true);
+      xhttp.send();
+    </script>
+  </body>
+</html>

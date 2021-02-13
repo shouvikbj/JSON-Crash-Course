@@ -1,0 +1,16 @@
+{
+  "people": [
+    {
+      "name": "Shouvik",
+      "age": 24
+    },
+    {
+      "name": "Abhigyan",
+      "age": 24
+    },
+    {
+      "name": "Bajpayee",
+      "age": 22
+    }
+  ]
+}
